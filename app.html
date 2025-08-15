@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper Generator - App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <button id="theme-toggle">&#9789;</button>
+
+    <div id="main-content">
+        <h1 class="main-heading">Question Paper Generator</h1>
+
+        <div class="step-container" id="step1">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h2 class="heading-logo">QP Generator</h2>
+                </div>
+                <div id="sidebar-scroll-area">
+                    <h3>Units</h3>
+                    <ul id="unit-list"></ul>
+                </div>
+                <div class="sidebar-actions">
+                    <button class="primary-btn or-btn" onclick="groupOrQuestions()">Group as 'OR'</button>
+                    <button id="add-unit-btn" onclick="addUnit()">+ Add Unit</button>
+                </div>
+                <button class="primary-btn continue-btn" onclick="moveToStep2()">Continue to Next Step</button>
+            </div>
+            <div id="question-areas-container"></div>
+        </div>
+
+        <div class="step-container" id="step2" style="display: none;">
+            </div>
+
+    </div>
+
+    <div id="overlay"></div>
+    <div id="messageBox">
+        <h3 class="title"></h3>
+        <p class="content"></p>
+        <button class="primary-btn" onclick="closeMessage()">OK</button>
+    </div>
+    <div id="loadingBox">
+        <div class="loader"></div>
+        <p class="mt-4">Generating PDF...</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

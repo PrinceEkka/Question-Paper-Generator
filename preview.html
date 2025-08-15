@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-g">
+    <title>Print Preview</title>
+    <style>
+        /* CSS for printing */
+        @media print {
+            body { font-family: 'Times New Roman', Times, serif; }
+            .no-print { display: none; }
+            .page {
+                page-break-after: always;
+                width: 210mm;
+                height: 297mm;
+                padding: 2cm;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print">
+        <button onclick="window.print()">Print</button>
+    </div>
+    <div id="print-container">
+        </div>
+</body>
+</html>
